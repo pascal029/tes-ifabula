@@ -2,7 +2,7 @@ class CompanyQuery {
   static find(input) {
     const query = `
       SELECT * FROM "Companies" c 
-        WHERE c."nama" ILIKE '${input.nama}' AND c."kode"='${input.kode}'
+        WHERE c."nama" ILIKE '${input.nama}'
     `;
 
     return query;
