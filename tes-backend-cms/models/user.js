@@ -1,5 +1,5 @@
 const { pool } = require("../config/index");
-const UserQuery = require("./userQueries");
+const UserQuery = require("./queries/userQueries");
 
 class UserModel {
   static async login(input, cb) {

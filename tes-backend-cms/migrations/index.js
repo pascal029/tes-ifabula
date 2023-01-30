@@ -2,7 +2,7 @@ const { pool } = require("../config");
 const queryCompanies = `
   create table if not exists "Companies"(
     "id" SERIAL primary key,
-    "nama" Varchar(120) not null,
+    "nama" Varchar(120) unique not null,
     "kode" INTEGER unique not null
   )
 `;
