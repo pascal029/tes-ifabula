@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build" : "node migrations/barang.js & node migrations/user.js & node seeders/user.js",
+    "build" : "node migrations/index.js && node migrations/user.js && node seeders/user.js",
     "start": "npx nodemon app.js"
   },
   "keywords": [],
