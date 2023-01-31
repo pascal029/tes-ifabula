@@ -1,0 +1,22 @@
+{
+  "name": "tes-backend-cms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node migrations/index.js && node migrations/user.js && node seeders/user.js",
+    "start": "npx nodemon app.js"
+  },
+  "keywords": [],
+  "author": "pascal",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "pg": "^8.9.0"
+  },
+  "devDependencies": {
+    "json2csv": "^6.0.0-alpha.2",
+    "nodemon": "^2.0.20"
+  }
+}
