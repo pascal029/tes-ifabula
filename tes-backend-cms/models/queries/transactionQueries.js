@@ -15,6 +15,20 @@ class TransactionQuery {
     `;
     return query;
   }
+  static findAll() {
+    const query = `
+      SELECT 
+        "Nama Perusahaan", 
+        "Nama Barang", 
+        "Total Barang", 
+        "Harga Barang", 
+        "Grand Total", 
+        "Sisa Barang", 
+        "Tanggal Input"
+      from "Transactions"
+    `;
+    return query;
+  }
 }
 
 module.exports = TransactionQuery;
