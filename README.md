@@ -8,3 +8,7 @@
 - RUN npm run build
 - RUN npm start
 - the available endpoints are on the /routes/index.js
+- move to directory web-based
+- RUN npm i
+- RUN npm start
+- login data(username : user1, password : usersatu)
