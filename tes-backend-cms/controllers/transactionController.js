@@ -5,6 +5,8 @@ const Barang = require("../models/barang");
 class TransactionController {
   static inputTransaction(req, res) {
     const { namaPerusahaan, namaBarang, hargaBarang, totalBarang } = req.body;
+    if (!namaPerusahaan || !namaBarang || !hargaBarang || !totalBarang)
+      throw { name: "field required" };
 
     CompanyModel.findCompany({ nama: namaPerusahaan }, (err, resp) => {
       if (err) {

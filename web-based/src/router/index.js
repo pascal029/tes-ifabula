@@ -26,16 +26,14 @@ const router = createBrowserRouter([
       }
       return null;
     },
-    children: [
-      {
-        path: "/transaksi",
-        element: <Transaksi />,
-      },
-      {
-        path: "/Perusahaan",
-        element: <Perusahaan />,
-      },
-    ],
+  },
+  {
+    path: "/transaksi",
+    element: <Transaksi />,
+  },
+  {
+    path: "/perusahaan",
+    element: <Perusahaan />,
   },
 ]);
 export default router;

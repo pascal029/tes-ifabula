@@ -1,9 +1,10 @@
 import FileDownload from "js-file-download";
-
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+  const navigate = useNavigate();
   const downloadTransaction = (e) => {
     e.preventDefault();
-    const tes = fetch("http://localhost:3001/input-transaksi", {
+    fetch("http://localhost:3001/input-transaksi", {
       headers: {
         "Content-type": "application/json",
         access_token: localStorage.access_token,
@@ -17,13 +18,22 @@ export default function Home() {
         FileDownload(resp, "transaction.csv");
       });
   };
+
+  function MoveToPerusahaan() {
+    navigate("/perusahaan");
+  }
+
+  function MoveToTransaksi() {
+    navigate("/transaksi");
+  }
+
   return (
     <div className="container" style={{ gap: 10 }}>
       <div>
-        <button>Input Perusahaan</button>
+        <button onClick={MoveToPerusahaan}>Input Perusahaan</button>
       </div>{" "}
       <div>
-        <button>Input Transaksi</button>
+        <button onClick={MoveToTransaksi}>Input Transaksi</button>
       </div>{" "}
       <div>
         <button onClick={downloadTransaction}>Export data csv</button>

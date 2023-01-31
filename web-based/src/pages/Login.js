@@ -32,7 +32,6 @@ export default function Login() {
       })
       .then((data) => {
         localStorage.setItem("token", "token");
-        console.log("masuk sini");
         navigate("/");
       })
       .catch((error) => {
