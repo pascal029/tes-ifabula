@@ -1,0 +1,5 @@
+kesalahan pada file tes-debug.html
+1. koma hilang pada line 23
+2. petik 2 hilang pada line 429
+3. Value property valueAsString hilang pada line 438
+4. kesalahan penulisan value variable tmpStrb pada line 528

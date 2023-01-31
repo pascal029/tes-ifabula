@@ -5,7 +5,6 @@ class CompanyController {
     try {
       const { nama, kode } = req.body;
       if (!nama || !kode) throw { name: "input required" };
-
       await CompanyModel.inputCompany({ nama, kode }, (err, companyData) => {
         if (err) {
           return res.status(400).json({ error: err.name });
