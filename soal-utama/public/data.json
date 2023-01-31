@@ -1,0 +1,15 @@
+[
+    {
+        "id" : 1,
+        "warna" : "red"
+    },{
+        "id" : 2,
+        "warna" : "blue"
+    },{
+        "id" : 3,
+        "warna" : "green"
+    },{
+        "id" : 4,
+        "warna" : "yellow"
+    }
+]
