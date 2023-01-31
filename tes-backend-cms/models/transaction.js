@@ -34,6 +34,16 @@ class TransactionModel {
       }
     );
   }
+
+  static getAllTransactions(cb) {
+    pool.query(TransactionQuery.findAll(), (err, resp) => {
+      if (err) {
+        cb(err);
+      } else {
+        cb(null, resp.rows);
+      }
+    });
+  }
 }
 
 module.exports = TransactionModel;
